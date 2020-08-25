@@ -1,0 +1,10 @@
+<h1>Home Page</h1> 
+<form style="text-align: center; margin: 20px;" action="{% url 'query_results' %}" method="get">
+<input name="query" type="text" placeholder="Search Products"> <button type="submit">Search</button>
+</form>
+{% for product in products  %}
+<div style="text-align: center;">	
+{{product.name}} - {{product.price}} - {{product.category}} 	
+<hr>
+</div>
+{%endfor%}

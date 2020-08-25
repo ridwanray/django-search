@@ -1,0 +1,17 @@
+<body style="text-align: center;">
+    <h1>Search Page</h1>
+    <hr>
+    {% for result in results %}
+
+    <div style="text-align: center;">	
+	{{result.name}} - {{result.price}} - {{result.category}} 	
+	<hr>
+	</div>
+	{% empty  %}
+		<h2 >No results found</h2>
+		<div >
+		<a href="{% url 'home' %}"> < Back Home</a>
+		</div>
+
+    {% endfor %}
+</body>
